@@ -1,0 +1,100 @@
+{
+    "layer": "top",
+    "position": "top",
+    "spacing": 4,
+
+    "modules-left": [
+        "sway/workspaces",
+        "sway/mode"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+"modules-right": [
+    "idle_inhibitor",
+    "pulseaudio",
+    "network",
+    "power-profiles-daemon",
+    "cpu",
+    "memory",
+    "temperature",
+    "backlight",
+    "battery",
+    "tray"
+],
+    
+
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{name}"
+    },
+
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+
+    "clock": {
+        "format": "  {:%I:%M %p}",
+        "format-alt": "  {:%a, %b %d}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>"
+    },
+
+    "backlight": {
+        "format": "{icon}  {percent}%",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}  {capacity}%",
+        "format-charging": "  {capacity}%",
+        "format-plugged": "  {capacity}%",
+        "format-icons": ["", "", "", "", ""]
+    },
+
+    "network": {
+        "format-wifi": "  {essid}",
+        "format-ethernet": "    Connected",
+        "format-disconnected": "    Offline",
+        "tooltip-format": "{ifname}: {ipaddr}/{cidr}"
+    },
+
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-muted": "  Muted",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    "tray": {
+        "spacing": 8
+    }
+}
+
+"modules-right": [
+    "pulseaudio",
+    "backlight",
+    "network",
+    "cpu",
+    "memory",
+    "temperature",
+    "battery",
+    "tray"
+],
+"clock": {
+    "format": "  {:%I:%M %p}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "format-alt": "{:%Y-%m-%d}"
+},
+
+"sway/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "format": "{name}"
+},
