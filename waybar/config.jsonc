@@ -101,7 +101,7 @@
 },
 
 "custom/launcher": {
-    "format": "APPS",
+    "format": " ",
     "tooltip": true,
     "tooltip-format": "Open Applications",
     "on-click": "pkill wofi || wofi --show drun"

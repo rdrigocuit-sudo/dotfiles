@@ -7,6 +7,16 @@ hl.env("XCURSOR_SIZE", "88")
 -- Settings
 hl.config({
     general = {
+        border_size = 5,
+        col = {
+            active_border = {
+                colors = {"rgba(33ccffee)", "rgba(00ff99ee)", "rgba(ff7800ff)"},
+                angle = 45,
+            },
+            inactive_border = {
+                colors = {"rgba(ed333bff)", "rgba(e5a50aff)"},
+            },
+        },
         resize_on_border = true,
     },
     input = {
@@ -17,4 +27,10 @@ hl.config({
 -- Keybinds
 hl.unbind("SUPER + CTRL + F")
 hl.bind("SUPER + CTRL + F", hl.dsp.exec_cmd("firefox"))
+hl.unbind("SUPER + SHIFT + H")
 hl.bind("SUPER + SHIFT + H", hl.dsp.exec_cmd("hyprmod"))
+
+-- Autostart
+hl.on("hyprland.start", function()
+    hl.exec_cmd("mako")
+end)
