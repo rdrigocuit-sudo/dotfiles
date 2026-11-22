@@ -62,7 +62,8 @@
         "format-wifi": "  {essid}",
         "format-ethernet": "    Connected",
         "format-disconnected": "    Offline",
-        "tooltip-format": "{ifname}: {ipaddr}/{cidr}"
+        "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
+	"on-click": "nm-connection-editor"
     },
 
     "pulseaudio": {
