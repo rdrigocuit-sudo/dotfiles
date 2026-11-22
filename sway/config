@@ -47,11 +47,11 @@ output * bg /home/rodrigoc/Downloads/wp13989096-deltarune-desktop-wallpapers.jpg
 # Example configuration:
 #
 #   input type:touchpad {
-#       dwt enabled
-#       tap enabled
-#       natural_scroll enabled
-#       middle_emulation enabled
-#   }
+ #      dwt enabled
+  #     tap enabled
+   #    natural_scroll enabled
+    #   middle_emulation enabled
+   }
 #
 #   input type:keyboard {
 #       xkb_layout "eu"
