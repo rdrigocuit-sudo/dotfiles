@@ -372,4 +372,15 @@ hl.window_rule({
     float = true,
 })
 hl.bind("SUPER + D", hl.dsp.exec_cmd("wofi --show drun"))
+-- Resize windows with ALT + arrow keys
 
+hl.bind("ALT + RIGHT", hl.dsp.window.resize({ x = 50, y = 0, relative = true }), { repeating = true })
+hl.bind("ALT + LEFT", hl.dsp.window.resize({ x = -50, y = 0, relative = true }), { repeating = true })
+hl.bind("ALT + UP", hl.dsp.window.resize({ x = 0, y = -50, relative = true }), { repeating = true })
+hl.bind("ALT + DOWN", hl.dsp.window.resize({ x = 0, y = 50, relative = true }), { repeating = true })
+hl.on("hyprland.start", function()
+	hl.exec_cmd("pgrep -x waybar >/dev/null || waybar")
+end)
+
+-- HyprMod managed settings
+require("hyprland-gui")
