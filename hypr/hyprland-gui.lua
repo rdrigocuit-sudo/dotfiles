@@ -24,6 +24,12 @@ hl.config({
     },
 })
 
+-- Workspaces
+hl.workspace_rule({
+    workspace = "1",
+    default_name = "terminal",
+})
+
 -- Keybinds
 hl.unbind("SUPER + CTRL + F")
 hl.bind("SUPER + CTRL + F", hl.dsp.exec_cmd("firefox"))
