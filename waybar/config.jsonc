@@ -5,7 +5,9 @@
 
     "modules-left": [
         "sway/workspaces",
-        "sway/mode"
+        "sway/mode",
+	"custom/launcher",
+	"hyprland/workspaces"
     ],
     "modules-center": [
         "clock"
@@ -74,8 +76,7 @@
 
     "tray": {
         "spacing": 8
-    }
-}
+    },
 
 "modules-right": [
     "pulseaudio",
@@ -98,3 +99,12 @@
     "all-outputs": true,
     "format": "{name}"
 },
+
+"custom/launcher": {
+    "format": "APPS",
+    "tooltip": true,
+    "tooltip-format": "Open Applications",
+    "on-click": "pkill wofi || wofi --show drun"
+},
+
+}

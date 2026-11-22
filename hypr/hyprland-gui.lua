@@ -13,3 +13,8 @@ hl.config({
         natural_scroll = false,
     },
 })
+
+-- Keybinds
+hl.unbind("SUPER + CTRL + F")
+hl.bind("SUPER + CTRL + F", hl.dsp.exec_cmd("firefox"))
+hl.bind("SUPER + SHIFT + H", hl.dsp.exec_cmd("hyprmod"))
